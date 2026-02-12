@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashraf | Leader of Noobs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #3b82f6;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+    }
+
+    body {
+      font-family: 'Inter', 'Hind Siliguri', sans-serif;
+      transition: background-color 0.5s ease;
+      background-color: #09090b;
+    }
+
+    section {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .dark .glass {
+      background: rgba(10, 10, 10, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Enhanced Scroll Reveal System */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      filter: blur(10px);
+      transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+
+    .reveal-left {
+      transform: translateX(-40px);
+    }
+
+    .reveal-right {
+      transform: translateX(40px);
+    }
+
+    .reveal-zoom {
+      transform: scale(0.9);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.1);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 10px;
+      opacity: 0.5;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .animate-float {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    /* Section Dot Indicator Animation */
+    .dot-indicator {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .dot-indicator.active {
+      height: 24px;
+      background-color: var(--primary);
+      box-shadow: 0 0 15px var(--primary);
+    }
+  </style>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-BkbIOSLs.js"></script>
+</head>
+<body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 overflow-x-hidden">
+  <div id="root"></div>
+</body>
+</html>
